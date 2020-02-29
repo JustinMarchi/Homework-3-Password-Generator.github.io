@@ -23,18 +23,18 @@ function determineLength(){
       alert("Password length must be a number between 8-128 characters");
       determineLength();
     }else{
-    alert("The next three screens will ask you what types of characters you would like to be included in your password.\nIf you choose 'N' for all, your password will only contain lowercase letters.");
+    alert("The next three screens will ask you what types of characters you would like to be included in your password.\nIf you choose 'No' for all, your password will only contain lowercase letters.");
     }
     return passwordLength;
 }
 
 //Function used to determine whether the user wants to include uppercase characters in the password
 function determineUppercase(){
-  uppercaseCheck = prompt("Do you want to include uppercase letters in your password? (Y/N)");
+  uppercaseCheck = prompt("Do you want to include uppercase letters in your password? \n(Yes or No)");
     uppercaseCheck = uppercaseCheck.toLowerCase();
 
     if (uppercaseCheck === null || uppercaseCheck === ""){
-      alert("Please answer Y or N");
+      alert("Please answer Yes or No");
       determineUppercase();
 
     }else if (uppercaseCheck === "yes" || uppercaseCheck ==="y"){
@@ -46,7 +46,7 @@ function determineUppercase(){
       return uppercaseCheck;
     
     }else {
-      alert("Please answer Y or N");
+      alert("Please answer Yes or No");
       determineUppercase();
     }
     return uppercaseCheck;
@@ -54,11 +54,11 @@ function determineUppercase(){
 
 //Function used to determine whether the user wants to include numbers in the password
 function determineNumbers(){
-  numberCheck = prompt("Do you want to include numbers in your password? (Y/N)");
+  numberCheck = prompt("Do you want to include numbers in your password? \n(Yes or No)");
     numberCheck = numberCheck.toLowerCase();
 
     if (numberCheck === null || numberCheck === ""){
-      alert("Please answer Y or N");
+      alert("Please answer Yes or No");
       determineNumbers();
 
     }else if (numberCheck === "yes" || numberCheck ==="y"){
@@ -70,7 +70,7 @@ function determineNumbers(){
       return numberCheck;
     
     }else {
-      alert("Please answer Y or N");
+      alert("Please answer Yes or No");
       determineNumbers();
     }
     return numberCheck;
@@ -78,11 +78,11 @@ function determineNumbers(){
 
 //Function used to determine whether the user wants to include special characters in the password
 function determineSpecial(){
-  specialCheck = prompt("Do you want to include special characters in your password? (Y/N)");
+  specialCheck = prompt("Do you want to include special characters in your password? \n(Yes or No)");
     specialCheck = specialCheck.toLowerCase();
 
     if (specialCheck === null || specialCheck === ""){
-      alert("Please answer Y or N");
+      alert("Please answer Yes or No");
       determineSpecial();
 
     }else if (specialCheck === "yes" || specialCheck ==="y"){
@@ -94,7 +94,7 @@ function determineSpecial(){
       return specialCheck;
     
     }else {
-      alert("Please answer Y or N");
+      alert("Please answer Yes or No");
       determineSpecial();
     }
     return specialCheck;
@@ -153,9 +153,9 @@ function writePassword() {
   passwordText.value = password1;
 }
 
-function resetText(){
-  document.getElementById("password").value = "Your Secure Password";
-}
+// function resetText(){
+//   document.getElementById("password").value = "Your Secure Password";
+// }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
